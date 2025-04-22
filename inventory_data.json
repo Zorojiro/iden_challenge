@@ -1,0 +1,452 @@
+[
+    {
+        "name": "Ultimate Clothing Set",
+        "id": 0,
+        "category": "Clothing",
+        "stock": 149,
+        "material": "Fabric",
+        "brand": "QualityCraft",
+        "updated": "6 days ago"
+    },
+    {
+        "name": "Innovative Electronics Series",
+        "id": 1,
+        "category": "Electronics",
+        "stock": 732,
+        "material": "Silicone",
+        "brand": "QualityCraft",
+        "updated": "30 days ago"
+    },
+    {
+        "name": "Deluxe Books Bundle",
+        "id": 2,
+        "category": "Books",
+        "stock": 748,
+        "material": "Glass",
+        "brand": "MegaManufacturing",
+        "updated": "26 days ago"
+    },
+    {
+        "name": "Modern Books System",
+        "id": 3,
+        "category": "Books",
+        "stock": 839,
+        "material": "Wood",
+        "brand": "TechCorp",
+        "updated": "23 days ago"
+    },
+    {
+        "name": "Compact Clothing Set",
+        "id": 4,
+        "category": "Clothing",
+        "stock": 791,
+        "material": "Leather",
+        "brand": "SuperProducts",
+        "updated": "17 days ago"
+    },
+    {
+        "name": "Professional Garden Ultra",
+        "id": 5,
+        "category": "Garden",
+        "stock": 503,
+        "material": "Glass",
+        "brand": "QualityCraft",
+        "updated": "20 days ago"
+    },
+    {
+        "name": "Innovative Automotive System",
+        "id": 6,
+        "category": "Automotive",
+        "stock": 767,
+        "material": "Wood",
+        "brand": "MegaManufacturing",
+        "updated": "24 days ago"
+    },
+    {
+        "name": "Smart Electronics Pro",
+        "id": 7,
+        "category": "Electronics",
+        "stock": 70,
+        "material": "Ceramic",
+        "brand": "SuperProducts",
+        "updated": "29 days ago"
+    },
+    {
+        "name": "Innovative Office Ultra",
+        "id": 8,
+        "category": "Office",
+        "stock": 881,
+        "material": "Carbon Fiber",
+        "brand": "ValueCreators",
+        "updated": "23 days ago"
+    },
+    {
+        "name": "Smart Health Solution",
+        "id": 9,
+        "category": "Health",
+        "stock": 316,
+        "material": "Wood",
+        "brand": "QualityCraft",
+        "updated": "26 days ago"
+    },
+    {
+        "name": "Innovative Books Set",
+        "id": 10,
+        "category": "Books",
+        "stock": 473,
+        "material": "Fabric",
+        "brand": "ValueCreators",
+        "updated": "24 days ago"
+    },
+    {
+        "name": "Modern Automotive Collection",
+        "id": 11,
+        "category": "Automotive",
+        "stock": 47,
+        "material": "Wood",
+        "brand": "TechCorp",
+        "updated": "25 days ago"
+    },
+    {
+        "name": "Luxury Toys Package",
+        "id": 12,
+        "category": "Toys",
+        "stock": 688,
+        "material": "Plastic",
+        "brand": "TechCorp",
+        "updated": "6 days ago"
+    },
+    {
+        "name": "Innovative Sports Lite",
+        "id": 13,
+        "category": "Sports",
+        "stock": 495,
+        "material": "Leather",
+        "brand": "SuperProducts",
+        "updated": "5 days ago"
+    },
+    {
+        "name": "Luxury Home & Kitchen System",
+        "id": 14,
+        "category": "Home & Kitchen",
+        "stock": 854,
+        "material": "Steel",
+        "brand": "MegaManufacturing",
+        "updated": "26 days ago"
+    },
+    {
+        "name": "Modern Toys Tool",
+        "id": 15,
+        "category": "Toys",
+        "stock": 903,
+        "material": "Wood",
+        "brand": "PrimeBrands",
+        "updated": "21 days ago"
+    },
+    {
+        "name": "Advanced Automotive Package",
+        "id": 16,
+        "category": "Automotive",
+        "stock": 212,
+        "material": "Wood",
+        "brand": "SuperProducts",
+        "updated": "24 days ago"
+    },
+    {
+        "name": "Professional Toys Device",
+        "id": 17,
+        "category": "Toys",
+        "stock": 373,
+        "material": "Fabric",
+        "brand": "PrimeBrands",
+        "updated": "21 days ago"
+    },
+    {
+        "name": "Eco-friendly Automotive Ultra",
+        "id": 18,
+        "category": "Automotive",
+        "stock": 44,
+        "material": "Silicone",
+        "brand": "PrecisionProducts",
+        "updated": "29 days ago"
+    },
+    {
+        "name": "Ultimate Automotive Solution",
+        "id": 19,
+        "category": "Automotive",
+        "stock": 778,
+        "material": "Carbon Fiber",
+        "brand": "PrimeBrands",
+        "updated": "15 days ago"
+    },
+    {
+        "name": "Budget Office Ultra",
+        "id": 20,
+        "category": "Office",
+        "stock": 142,
+        "material": "Leather",
+        "brand": "QualityCraft",
+        "updated": "29 days ago"
+    },
+    {
+        "name": "Luxury Clothing Tool",
+        "id": 21,
+        "category": "Clothing",
+        "stock": 939,
+        "material": "Steel",
+        "brand": "MegaManufacturing",
+        "updated": "22 days ago"
+    },
+    {
+        "name": "Innovative Electronics Tool",
+        "id": 22,
+        "category": "Electronics",
+        "stock": 262,
+        "material": "Plastic",
+        "brand": "MegaManufacturing",
+        "updated": "about 18 hours ago"
+    },
+    {
+        "name": "Compact Health Device",
+        "id": 23,
+        "category": "Health",
+        "stock": 254,
+        "material": "Aluminum",
+        "brand": "TechCorp",
+        "updated": "18 days ago"
+    },
+    {
+        "name": "Deluxe Clothing Kit",
+        "id": 24,
+        "category": "Clothing",
+        "stock": 205,
+        "material": "Aluminum",
+        "brand": "ValueCreators",
+        "updated": "23 days ago"
+    },
+    {
+        "name": "Modern Books Set",
+        "id": 25,
+        "category": "Books",
+        "stock": 963,
+        "material": "Silicone",
+        "brand": "QualityCraft",
+        "updated": "22 days ago"
+    },
+    {
+        "name": "Budget Toys Package",
+        "id": 26,
+        "category": "Toys",
+        "stock": 435,
+        "material": "Aluminum",
+        "brand": "PrimeBrands",
+        "updated": "26 days ago"
+    },
+    {
+        "name": "Modern Garden Lite",
+        "id": 27,
+        "category": "Garden",
+        "stock": 215,
+        "material": "Plastic",
+        "brand": "MegaManufacturing",
+        "updated": "6 days ago"
+    },
+    {
+        "name": "Compact Automotive Device",
+        "id": 28,
+        "category": "Automotive",
+        "stock": 654,
+        "material": "Aluminum",
+        "brand": "InnovateTech",
+        "updated": "9 days ago"
+    },
+    {
+        "name": "Premium Toys Max",
+        "id": 29,
+        "category": "Toys",
+        "stock": 873,
+        "material": "Steel",
+        "brand": "EliteMakers",
+        "updated": "17 days ago"
+    },
+    {
+        "name": "Modern Clothing System",
+        "id": 30,
+        "category": "Clothing",
+        "stock": 358,
+        "material": "Ceramic",
+        "brand": "InnovateTech",
+        "updated": "13 days ago"
+    },
+    {
+        "name": "Professional Health Series",
+        "id": 31,
+        "category": "Health",
+        "stock": 53,
+        "material": "Steel",
+        "brand": "SuperProducts",
+        "updated": "13 days ago"
+    },
+    {
+        "name": "Ultimate Office Tool",
+        "id": 32,
+        "category": "Office",
+        "stock": 610,
+        "material": "Steel",
+        "brand": "QualityCraft",
+        "updated": "30 days ago"
+    },
+    {
+        "name": "Budget Automotive System",
+        "id": 33,
+        "category": "Automotive",
+        "stock": 393,
+        "material": "Ceramic",
+        "brand": "QualityCraft",
+        "updated": "17 days ago"
+    },
+    {
+        "name": "Professional Sports Kit",
+        "id": 34,
+        "category": "Sports",
+        "stock": 887,
+        "material": "Ceramic",
+        "brand": "GlobalGoods",
+        "updated": "25 days ago"
+    },
+    {
+        "name": "Modern Sports Set",
+        "id": 35,
+        "category": "Sports",
+        "stock": 981,
+        "material": "Silicone",
+        "brand": "MegaManufacturing",
+        "updated": "21 days ago"
+    },
+    {
+        "name": "Budget Electronics Series",
+        "id": 36,
+        "category": "Electronics",
+        "stock": 971,
+        "material": "Ceramic",
+        "brand": "EliteMakers",
+        "updated": "5 days ago"
+    },
+    {
+        "name": "Smart Automotive Lite",
+        "id": 37,
+        "category": "Automotive",
+        "stock": 467,
+        "material": "Plastic",
+        "brand": "MegaManufacturing",
+        "updated": "23 days ago"
+    },
+    {
+        "name": "Essential Clothing Bundle",
+        "id": 38,
+        "category": "Clothing",
+        "stock": 609,
+        "material": "Silicone",
+        "brand": "PrecisionProducts",
+        "updated": "21 days ago"
+    },
+    {
+        "name": "Essential Beauty Solution",
+        "id": 39,
+        "category": "Beauty",
+        "stock": 164,
+        "material": "Fabric",
+        "brand": "ValueCreators",
+        "updated": "18 days ago"
+    },
+    {
+        "name": "Advanced Books Series",
+        "id": 40,
+        "category": "Books",
+        "stock": 534,
+        "material": "Carbon Fiber",
+        "brand": "QualityCraft",
+        "updated": "23 days ago"
+    },
+    {
+        "name": "Ultimate Beauty Bundle",
+        "id": 41,
+        "category": "Beauty",
+        "stock": 254,
+        "material": "Silicone",
+        "brand": "TechCorp",
+        "updated": "28 days ago"
+    },
+    {
+        "name": "Eco-friendly Health Plus",
+        "id": 42,
+        "category": "Health",
+        "stock": 669,
+        "material": "Silicone",
+        "brand": "GlobalGoods",
+        "updated": "18 days ago"
+    },
+    {
+        "name": "Modern Office Ultra",
+        "id": 43,
+        "category": "Office",
+        "stock": 47,
+        "material": "Leather",
+        "brand": "PrimeBrands",
+        "updated": "20 days ago"
+    },
+    {
+        "name": "Budget Automotive Set",
+        "id": 44,
+        "category": "Automotive",
+        "stock": 406,
+        "material": "Ceramic",
+        "brand": "SuperProducts",
+        "updated": "15 days ago"
+    },
+    {
+        "name": "Premium Automotive Set",
+        "id": 45,
+        "category": "Automotive",
+        "stock": 966,
+        "material": "Carbon Fiber",
+        "brand": "PrimeBrands",
+        "updated": "22 days ago"
+    },
+    {
+        "name": "Deluxe Health Max",
+        "id": 46,
+        "category": "Health",
+        "stock": 911,
+        "material": "Leather",
+        "brand": "InnovateTech",
+        "updated": "3 days ago"
+    },
+    {
+        "name": "Modern Office Tool",
+        "id": 47,
+        "category": "Office",
+        "stock": 245,
+        "material": "Wood",
+        "brand": "QualityCraft",
+        "updated": "17 days ago"
+    },
+    {
+        "name": "Modern Clothing Series",
+        "id": 48,
+        "category": "Clothing",
+        "stock": 185,
+        "material": "Plastic",
+        "brand": "EliteMakers",
+        "updated": "12 days ago"
+    },
+    {
+        "name": "Eco-friendly Electronics Kit",
+        "id": 49,
+        "category": "Electronics",
+        "stock": 476,
+        "material": "Wood",
+        "brand": "PrimeBrands",
+        "updated": "21 days ago"
+    }
+]
