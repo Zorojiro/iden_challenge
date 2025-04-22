@@ -9,42 +9,40 @@ EMAIL = "shubhamrgalande@gmail.com"
 PASSWORD = "injqH0Fm"
 AUTH_STATE_PATH = "auth_state.json"
 
-# Login and save session state
+# Logs in and saves session state for future runs
 async def login_and_save_state(page, context):
     print("Logging in and saving session...")
-    await page.goto(URL)  # Go to login page
-    await page.fill("input[type='email']", EMAIL)  # Enter email
-    await page.fill("input[type='password']", PASSWORD)  # Enter password
-    await page.click("button[type='submit']")  # Submit login form
-    await page.wait_for_load_state("networkidle")  # Wait for page to load
-    # Wait for and click through onboarding buttons
-    await page.wait_for_selector('button:has-text("Launch Challenge")', state="visible")
-    await page.locator('button:has-text("Launch Challenge")').click()  # Start challenge
-    await page.locator('button:has-text("Start Journey")').click()  # Start journey
-    await page.locator('button:has-text("Continue Search")').click()  # Continue search
-    await page.locator('button:has-text("Inventory Section")').click()  # Go to inventory
-    await page.wait_for_load_state("networkidle")  # Wait for inventory to load
-    await context.storage_state(path=AUTH_STATE_PATH)  # Save session state
+    await page.goto(URL)
+    await page.fill("input[type='email']", EMAIL)
+    await page.fill("input[type='password']", PASSWORD)
+    await page.click("button[type='submit']")
+    await page.wait_for_load_state("networkidle")
+    await page.locator('button:has-text("Launch Challenge")').click()
+    await page.locator('button:has-text("Start Journey")').click()
+    await page.locator('button:has-text("Continue Search")').click()
+    await page.locator('button:has-text("Inventory Section")').click()
+    await page.wait_for_load_state("networkidle")
+    await context.storage_state(path=AUTH_STATE_PATH)
     print("Session saved.")
 
-# Scroll until enough product cards are loaded
+# Scrolls until at least target_count product cards are loaded
 async def scroll_until_at_least(page, target_count=50):
     for _ in range(30):
-        cards = await page.locator("div.rounded-md.border").all()  # Get all product cards
+        cards = await page.locator("div.rounded-md.border").all()
         if len(cards) >= target_count:
-            break  # Stop if enough cards are loaded
-        await page.mouse.wheel(0, 3000)  # Scroll down
-        await asyncio.sleep(1)  # Wait for new cards to load
+            break
+        await page.mouse.wheel(0, 3000)
+        await asyncio.sleep(0.3)
 
-# Extract product data from cards
+# Extracts product data from loaded cards using parallel async calls
 async def extract_products(page, limit=50):
-    cards = await page.locator("div.rounded-md.border").all()  # Get all product cards
+    cards = await page.locator("div.rounded-md.border").all()
     async def extract(card):
-        name = await card.locator("h3.font-medium").text_content()  # Product name
-        id_cat = await card.locator("div.text-sm.text-muted-foreground").inner_text()  # ID and category
+        name = await card.locator("h3.font-medium").text_content()
+        id_cat = await card.locator("div.text-sm.text-muted-foreground").inner_text()
         pid, cat = id_cat.replace("ID: ", "").split("•")
-        stats = await card.locator("div.flex.flex-col.items-center").all()  # Product stats
-        # Extract stats in parallel
+        stats = await card.locator("div.flex.flex-col.items-center").all()
+        # Gather all stats in parallel for speed
         stock, material, brand, updated = await asyncio.gather(
             stats[0].locator("span.font-medium").text_content(),
             stats[1].locator("span.font-medium").text_content(),
@@ -60,40 +58,39 @@ async def extract_products(page, limit=50):
             "brand": brand,
             "updated": updated
         }
-    # Extract data for each card in parallel
     return await asyncio.gather(*(extract(card) for card in cards[:limit]))
 
-# Save products to a JSON file
+# Saves extracted products to a JSON file
 def save_products(products, path="inventory_data.json"):
     with open(path, "w") as f:
-        json.dump(products, f, indent=4)  # Write products to file
+        json.dump(products, f, indent=4)
     print(f"Scraped and saved {len(products)} products.")
 
-# Create browser context and page, handle session state
+# Creates a browser context, blocks images/fonts, and handles session state
 async def create_context_and_page(browser):
+    context = await browser.new_context()
     if os.path.exists(AUTH_STATE_PATH):
         with open(AUTH_STATE_PATH) as f:
             state = json.load(f)
         if not state.get("cookies") and not state.get("origins"):
             print("Session state is empty, proceeding with normal login...")
-            context = await browser.new_context()  # New context for login
-            page = await context.new_page()  # New page
-            return context, page, True  # Need to login
+            page = await context.new_page()
+            return context, page, True
         else:
             print("Loading existing session...")
-            context = await browser.new_context(storage_state=AUTH_STATE_PATH)  # Restore session
-            page = await context.new_page()  # New page
-            return context, page, False  # No need to login
+            context2 = await browser.new_context(storage_state=AUTH_STATE_PATH)
+            await context2.route("**/*", lambda route: route.abort() if route.request.resource_type in ["image", "font"] else route.continue_())
+            page = await context2.new_page()
+            return context2, page, False
     else:
-        context = await browser.new_context()  # New context for login
-        page = await context.new_page()  # New page
-        return context, page, True  # Need to login
+        page = await context.new_page()
+        return context, page, True
 
-# Main workflow
+# Main workflow: handles login/session, navigation, extraction, and saving
 async def main():
     try:
         async with async_playwright() as p:
-            browser = await p.chromium.launch(headless=False)
+            browser = await p.chromium.launch(headless=True)
             context, page, do_login = await create_context_and_page(browser)
             if do_login:
                 try:
@@ -112,6 +109,7 @@ async def main():
                     await browser.close()
                     return
             try:
+                # Adjust the number below to change how many products to scrape
                 await scroll_until_at_least(page, 3605)
                 products = await extract_products(page, 3605)
                 save_products(products)
@@ -121,5 +119,4 @@ async def main():
     except Exception as e:
         print(f"Fatal error: {e}")
 
-# Run the script
 asyncio.run(main())

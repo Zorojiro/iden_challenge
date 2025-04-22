@@ -5,10 +5,12 @@ This script automates login and product data extraction from the IdenHQ hiring s
 ## Features
 - Logs in with provided credentials (or restores session if available)
 - Navigates onboarding and inventory section
-- Scrolls to load at least 50 products
+- Scrolls to load a specified number of products (default: 3605)
 - Extracts product details in parallel for efficiency
 - Saves results to `inventory_data.json`
 - Handles session state in `auth_state.json`
+- Blocks images and fonts for faster scraping
+- Runs in headless mode for speed
 - Includes basic error handling and clear print statements
 
 ## Usage
@@ -35,11 +37,12 @@ This script automates login and product data extraction from the IdenHQ hiring s
 - `scroll_until_at_least(page, target_count)`: Scrolls to load enough products.
 - `extract_products(page, limit)`: Extracts product info in parallel.
 - `save_products(products, path)`: Saves products to a JSON file.
-- `create_context_and_page(browser)`: Handles session state and context creation.
+- `create_context_and_page(browser)`: Handles session state and context creation
 - `main()`: Orchestrates the workflow with error handling.
 
 ---
 
-**Note:**
+**Notes:**
 - The script uses print statements for status and error messages.
-- Make sure your environment supports Playwright and has Chrome/Chromium installed.
+- The browser runs in headless mode by default for speed.
+- Adjust the number of products to scrape by changing the value in `main()`.
